@@ -1,0 +1,20 @@
+<h1>1. Cookie </h1>
+	<p>A cookie is a small piece of information that is persisted between multiple client requests. </p>
+	<p>We add cookie to the response from the servlet. This response goes back to the client and the cookie is stored in the cache of the client's browser. </p>
+	<p>When client sends another request, the request comes with the cookie added to it by default. </p>
+	<p>Thus, we recognize the user. </p>
+	<p>There are 2 types of cookies in servlets. </p>
+	<p><b>i. Persistent Cookie:</b></p>
+	<p>It is valid for multiple session . It is removed only if user logout or signout. It is not removed when user closes the browser.</p>
+	<p><b>ii. Non-Persistent Cookie:</b></p>
+	<p>It is valid for single session only. It is removed each time user closes the browser.</p><br/>
+<h3>1. To retrieve a cookie,</h3>
+	<p><i>Cookie cookie[] = request.getCookies();</i></p>
+	<p><i>if(cookie.length > 0) </i></p>
+	<p><i>{ String id = cookie[0].getValue(); }</i></p>
+<h3>2. To create a cookie,</h3>
+	<p><i>Cookie cookie = new Cookie("ID", "2600860"); </i></p>
+	<p><i>response.addCookie(cookie); </i></p>
+<h3>3. To delete a cookie,</h3>
+	<p><i>Cookie cookie = new Cookie("ID", ""); </i></p>
+	<p><i>response.addCookie(cookie); </i></p>
